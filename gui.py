@@ -3,13 +3,10 @@ from tkinter import filedialog
 from parse import convert
 import threading
 
-def getResult(filename):
-    convert(filename)
-
 def getFile():
     global result
     filename = filedialog.askopenfilename()
-    result = threading.Thread(target=getResult, args=(filename))
+    result = threading.Thread(target=convert, args=(filename))
     return(result)
 
 def mainGUI():
