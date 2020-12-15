@@ -6,8 +6,8 @@ import threading
 def getFile():
     global result
     filename = filedialog.askopenfilename()
-    result = threading.Thread(target=convert, args=(filename))
-    return(result)
+    result = convert(filename)
+    print(result)
 
 def mainGUI():
     global result
