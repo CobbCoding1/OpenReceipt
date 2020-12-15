@@ -6,7 +6,7 @@ import re
 import cv2
 
 def convert(img):
-    file = open('names.txt', 'r')
+    file = open('data/names.txt', 'r')
     names = []
     name = ''
 
