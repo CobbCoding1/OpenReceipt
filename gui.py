@@ -5,7 +5,8 @@ import threading
 
 def getFile():
     global result
-    filename = filedialog.askopenfilename()
+    filename = filedialog.askopenfilename(multiple=True)
+    print(filename)
     result = convert(filename)
     result = str(result).replace('(', '')
     result = result.replace(')', '')
