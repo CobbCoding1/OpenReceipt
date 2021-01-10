@@ -1,15 +1,20 @@
-from openpyxl import load_workbook
+from openpyxl import Workbook, load_workbook
 
-workbook = load_workbook('hello_world.xlsx')
-sheet = workbook.active
+def addReceipt(receipt):
+    workbook = load_workbook('receipts.xlsx')
+    sheet = workbook.active
 
-num = 0
+    num = 0
 
-sheet['A2'] = 'test'
-print(sheet['A'])
-for row in sheet['A']:
-    num += 1
-sheet['A' + str(num+1)] = 'wasd'
+    for row in sheet['A']:
+        num += 1
+    sheet['A' + str(num+1)] = receipt[0]
+    sheet['B' + str(num+1)] = receipt[1]
+    sheet['C' + str(num+1)] = receipt[2]
+
+    workbook.save(filename='receipts.xlsx')
+
+    return(sheet['A:C'])
 
 def temp():
     workbook = Workbook()
@@ -20,3 +25,5 @@ def temp():
     sheet['C1'] = 'Store'
 
     workbook.save(filename='receipts.xlsx')
+
+#temp()

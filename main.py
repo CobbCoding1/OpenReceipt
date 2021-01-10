@@ -1,6 +1,6 @@
 from gui import mainGUI
 from parse import convert
-
+from excel import addReceipt
 from PIL import Image
 import threading
 import dateparser
@@ -14,4 +14,8 @@ result = mainGUI()
 
 img = 'test3.jpg'
 
-print(result)
+result = result.replace('(', '')
+result = result.replace(')', '')
+result = result.split(',')
+
+print(addReceipt(result))
