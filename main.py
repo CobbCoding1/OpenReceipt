@@ -9,13 +9,22 @@ import re
 import cv2
 
 filename = ''
+results = []
 
 result = mainGUI()
 
 img = 'test3.jpg'
 
-result = result.replace('(', '')
-result = result.replace(')', '')
-result = result.split(',')
+result = result.split('),')
 
-print(addReceipt(result))
+for i in result:
+    i = i.replace('(', '')
+    i = i.replace(')', '')
+    i = i.split(',')
+    results.append(addReceipt(i))
+
+#result = result.replace('(', '')
+#result = result.replace(')', '')
+#result = result.split(',')
+
+print(results)

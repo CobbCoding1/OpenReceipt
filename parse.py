@@ -24,11 +24,11 @@ def convert(imgs):
         if(date == None):
             date = re.search('[0-9][0-9]\[0-9][0-9][0-9]\[0-9][0-9]+', text)
         if(date == None):
-            date = 'Not found'
+            date = 'N'
 
         price = re.findall('[0-9]+\.[0-9]+', text)
         if(price == None or price == []):
-            price = 'Not found'
+            price = 'N'
 
         for i in range(len(names)):
             if names[i] in text:
