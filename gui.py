@@ -8,8 +8,6 @@ def getFile():
     filename = filedialog.askopenfilename(multiple=True)
     print(filename)
     result = convert(filename)
-    #result = str(result).replace('(', '')
-    #result = result.replace(')', '')
     result = str(result).replace("'", '')
     result = result.replace('[', '')
     result = result.replace(']', '')
