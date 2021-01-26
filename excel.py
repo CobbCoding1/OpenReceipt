@@ -1,9 +1,17 @@
 from openpyxl import Workbook, load_workbook
+import os
 
 # Add a receipt to the file
 def addReceipt(receipt):
-    # Open file
-    workbook = load_workbook('receipts.xlsx')
+    # Open excel file
+    
+    file = open('filename.txt', 'r')
+    excelFile = file.readline()
+    file.close()
+    print(excelFile)
+
+    # Load workbook from file
+    workbook = load_workbook(excelFile)
     sheet = workbook.active
 
     num = 0
@@ -18,19 +26,24 @@ def addReceipt(receipt):
     sheet['C' + str(num+1)] = receipt[2]
 
     # Save file
-    workbook.save(filename='receipts.xlsx')
+    workbook.save(filename=excelFile)
 
     # Return sheet information
     return(sheet['A:C'])
 
-def temp():
-    workbook = Workbook()
+def open_file(filename):
+    # Open existing workbook
+    workbook = load_workbook(filename)
     sheet = workbook.active
 
-    sheet['A1'] = 'Date'
-    sheet['B1'] = 'Total'
-    sheet['C1'] = 'Store'
+    #sheet['A1'] = 'Date'
+    #sheet['B1'] = 'Total'
+    #sheet['C1'] = 'Store'
 
-    workbook.save(filename='receipts.xlsx')
+    #workbook.save(filename=filename)
+    workbook.save(filename=filename)
+    file = open('filename.txt', 'w')
+    file.write(filename)
+    print('Wrote to file!')
 
 #temp()

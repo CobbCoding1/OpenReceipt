@@ -7,6 +7,12 @@ import dateparser
 import pytesseract
 import re
 import cv2
+import os
+
+if(os.path.isfile('filename.txt')):
+    pass
+else:
+    f = open('filename.txt', 'w')
 
 # Declare variables
 filename = ''
