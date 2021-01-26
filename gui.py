@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import filedialog
+from excel import open_file
 from parse import convert
 import threading
 
@@ -40,6 +41,10 @@ def mainGUI():
     submitButton = Button(command=root.destroy, text='Submit', bg='dark gray')
     submitButton.place(relx=.4, rely=.8, relwidth=.2, relheight=.1)
 
+    # Create excel file button
+    excelButton = Button(command=load_file, text='Load excel file', bg='dark gray')
+    excelButton.place(relx=.4, rely=.05, relwidth=.2, relheight=.1)
+
     # Mainloop
     root.mainloop()
     return(result)
@@ -47,3 +52,7 @@ def mainGUI():
 def addInfo(result):
     global parsedText
     parsedText.set(str(result))
+
+def load_file():
+    filename2 = filedialog.askopenfilename()
+    open_file(filename2)
