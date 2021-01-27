@@ -22,6 +22,7 @@ def getFile():
 def mainGUI():
     global result
     global parsedText
+    global root
 
     # Create the main GUI
     root = Tk()
@@ -38,7 +39,7 @@ def mainGUI():
     imgButton.place(relx=.375, rely=.2, relwidth=.25, relheight=.15)
 
     # Add submit button to send results to excel file
-    submitButton = Button(command=root.destroy, text='Submit', bg='dark gray')
+    submitButton = Button(command=submit, text='Submit', bg='dark gray')
     submitButton.place(relx=.4, rely=.8, relwidth=.2, relheight=.1)
 
     # Create excel file button
@@ -48,6 +49,17 @@ def mainGUI():
     # Mainloop
     root.mainloop()
     return(result)
+
+def submit():
+    global result
+    global parsedText
+    global root
+
+    # Get text from input box
+    result = parsedText.get()
+
+    # Destroy window
+    root.destroy()
 
 def addInfo(result):
     global parsedText

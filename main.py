@@ -10,7 +10,6 @@ import cv2
 import os
 
 # Check if filename.txt exists, if not create it
-
 if(os.path.isfile('filename.txt')):
     pass
 else:

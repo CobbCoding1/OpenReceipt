@@ -4,7 +4,7 @@ import os
 # Add a receipt to the file
 def addReceipt(receipt):
     # Open excel file
-    
+
     file = open('filename.txt', 'r')
     excelFile = file.readline()
     file.close()
@@ -45,5 +45,15 @@ def open_file(filename):
     file = open('filename.txt', 'w')
     file.write(filename)
     print('Wrote to file!')
+
+def new_file():
+    workbook = Workbook()
+    sheet = workbook.active
+
+    sheet['A1'] = 'Date'
+    sheet['B1'] = 'Total'
+    sheet['C1'] = 'Store'
+
+    workbook.save(filename='receipts.xlsx')
 
 #temp()
