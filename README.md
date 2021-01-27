@@ -11,8 +11,8 @@ Make sure to install in the default Program Files directory.
 
 Then you can git clone this repository in the directory of your choosing.
 
-After the clone is finished, go the the directory you installed it in and type
-pip install -r requirements.txt
+After the clone is finished, go the the directory you installed it in and type  
+pip install -r requirements.txt  
 to install the dependencies.
 
 Then, you can type python main.py in the command prompt, and it should run OpenReceipt.
