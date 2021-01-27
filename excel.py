@@ -36,10 +36,13 @@ def open_file(filename):
     workbook = load_workbook(filename)
     sheet = workbook.active
 
+    # Save workbook as the selected filename
     workbook.save(filename=filename)
+
+    # Open and write filename to file
     file = open('filename.txt', 'w')
     file.write(filename)
-    
+
     print('Wrote to file!')
 
 def new_file(dirname):
