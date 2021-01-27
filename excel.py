@@ -36,14 +36,10 @@ def open_file(filename):
     workbook = load_workbook(filename)
     sheet = workbook.active
 
-    #sheet['A1'] = 'Date'
-    #sheet['B1'] = 'Total'
-    #sheet['C1'] = 'Store'
-
-    #workbook.save(filename=filename)
     workbook.save(filename=filename)
     file = open('filename.txt', 'w')
     file.write(filename)
+    
     print('Wrote to file!')
 
 def new_file(dirname):
@@ -55,3 +51,6 @@ def new_file(dirname):
     sheet['C1'] = 'Store'
 
     workbook.save(filename=dirname + '/receipts.xlsx')
+
+    # Select file as default excel file
+    open_file(dirname + '/receipts.xlsx')
