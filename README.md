@@ -4,7 +4,7 @@ This is a receipt parser program, which takes an image of a receipt, reads it, a
 
 More information coming soon
 
-Installing Source on Windows
+Installing source code on Windows
 ----------------------------
 Install Tesseract from https://github.com/UB-Mannheim/tesseract/wiki and run through the installer.
 Make sure to install in the default Program Files directory.
