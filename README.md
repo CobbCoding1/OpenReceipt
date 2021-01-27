@@ -16,5 +16,7 @@ pip install -r requirements.txt
 to install the dependencies.
 
 Then, you can type python main.py in the command prompt, and it should run OpenReceipt.
-----------------------------
+
 OTHER OPERATING SYSTEMS COMING SOON
+----------------------------
+
