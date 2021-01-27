@@ -56,8 +56,10 @@ def mainGUI():
     return(result)
 
 def select_directory():
+    # Get directory from user to put new excel file
     dirname = filedialog.askdirectory()
-    print(dirname)
+
+    # Run new_file function to create new excel file, and pass the directory name from user
     new_file(dirname)
 
 def submit():
