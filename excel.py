@@ -46,13 +46,16 @@ def open_file(filename):
     print('Wrote to file!')
 
 def new_file(dirname):
+    # Create new workbook
     workbook = Workbook()
     sheet = workbook.active
 
+    # Add workbook template
     sheet['A1'] = 'Date'
     sheet['B1'] = 'Total'
     sheet['C1'] = 'Store'
 
+    # Save the workbook
     workbook.save(filename=dirname + '/receipts.xlsx')
 
     # Select file as default excel file
