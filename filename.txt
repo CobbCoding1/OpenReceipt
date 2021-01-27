@@ -1,1 +1,1 @@
-E:/Atom/Python/Projects/receipttest/receipts.xlsx
+E:/Atom/Python/Projects/receipttest/Data/receipts.xlsx

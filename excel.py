@@ -46,7 +46,7 @@ def open_file(filename):
     file.write(filename)
     print('Wrote to file!')
 
-def new_file():
+def new_file(dirname):
     workbook = Workbook()
     sheet = workbook.active
 
@@ -54,6 +54,4 @@ def new_file():
     sheet['B1'] = 'Total'
     sheet['C1'] = 'Store'
 
-    workbook.save(filename='receipts.xlsx')
-
-#temp()
+    workbook.save(filename=dirname + '/receipts.xlsx')

@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import filedialog
 from excel import open_file
+from excel import new_file
 from parse import convert
 import threading
 
@@ -38,17 +39,26 @@ def mainGUI():
     imgButton = Button(command=getFile, text='Upload', bg='dark gray')
     imgButton.place(relx=.375, rely=.2, relwidth=.25, relheight=.15)
 
+    # Ask for new excel file directory
+    newDir = Button(command=select_directory, text='New File', bg='dark gray')
+    newDir.place(relx=.4, rely=.01, relwidth=.2, relheight=.075)
+
     # Add submit button to send results to excel file
     submitButton = Button(command=submit, text='Submit', bg='dark gray')
     submitButton.place(relx=.4, rely=.8, relwidth=.2, relheight=.1)
 
     # Create excel file button
     excelButton = Button(command=load_file, text='Load excel file', bg='dark gray')
-    excelButton.place(relx=.4, rely=.05, relwidth=.2, relheight=.1)
+    excelButton.place(relx=.4, rely=.1, relwidth=.2, relheight=.075)
 
     # Mainloop
     root.mainloop()
     return(result)
+
+def select_directory():
+    dirname = filedialog.askdirectory()
+    print(dirname)
+    new_file(dirname)
 
 def submit():
     global result
