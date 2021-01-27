@@ -9,6 +9,8 @@ import re
 import cv2
 import os
 
+pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files\\Tesseract-OCR\\tesseract.exe'
+
 # Check if filename.txt exists, if not create it
 if(os.path.isfile('filename.txt')):
     pass
