@@ -6,6 +6,8 @@ More information coming soon
 
 Installing source code on Windows
 ----------------------------
+Prerequisites: Python 3 and pip.
+
 Install Tesseract from https://github.com/UB-Mannheim/tesseract/wiki and run through the installer.
 Make sure to install in the default Program Files directory.
 
