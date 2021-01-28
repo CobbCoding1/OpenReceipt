@@ -9,7 +9,7 @@ Installing source code on Windows
 Install Tesseract from https://github.com/UB-Mannheim/tesseract/wiki and run through the installer.
 Make sure to install in the default Program Files directory.
 
-Then you can git clone this repository in the directory of your choosing.
+Now, you can git clone this repository in the directory of your choosing.
 
 After the clone is finished, go the the directory you installed it in and type  
 pip install -r requirements.txt  
